@@ -205,5 +205,11 @@ class triple():
     
 trp = triple("-4")
 print(trp.value)
-trp.add("4")
+print("+4")
+trp.add("40")
+print(trp.value)
+print("\n\n*3")
+trp.multiply("3")
+print(trp.value)
+print("\n\n-10")
 print(trp.value)
