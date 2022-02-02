@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%;">
+<head>
+  <!-- Title -->
+  <title>Bluebotlaboratories - Home</title>
+  <!-- Icon -->
+  <link rel="icon" href="/assets/media/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/media/images/bluebot.png">
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bluebotlaboratories Home Page - Play games, Buy Cool Products or Download our Apps">
+  <meta name="keywords" content="Bluebotlaboratories, Bluebot, Blue bot, Robots, Apps, Games, Services, Downloader">
+  <!-- CSS -->
+  <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/ed2bdc0bb3.js" crossorigin="anonymous" SameSite=Lax></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  
+  <script src="/assets/scripts/Bluebotlaboratories-js-helper.js"></script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZMC7DR3SZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZZMC7DR3SZ');
+  </script>
+  <!-- Ad Test -->
+  <script data-ad-client="ca-pub-2348098156226261" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<noscript>
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+
+  <meta http-equiv="refresh" content="0.0; url=/errors/javaError.html" />
+</noscript>
+
+<body onload="load()">
+  <!-- Loader start -->
+  <image id="loader" src="/assets/media/loading.gif" alt="Loading...">
+  
+  <script>
+    function load() {
+      setTimeout(showPage, 2000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+      var typer = new Typed('#typer', {
+        strings: ["> At Bluebotlaboratories we create apps...^250", "> At Bluebotlaboratories we create games...^250", "> At Bluebotlaboratories we create services...^250", "> At Bluebotlaboratories we create the future^250"],
+        typeSpeed: 80,
+        backSpeed: 50,
+        cursorChar: '_',
+        smartBackspace: true,
+        onStringTyped: function(self) { console.log("hi"); }
+      });
+      var cursor = document.getElementsByClassName('typed-cursor');
+      for (var i = 0; i < cursor.length; i++) {
+        cursor[i].style.fontSize = "xx-large";
+      }
+    }
+  </script>
+  <!-- Loader end -->
+
+  <div style="display: none;" id="main" class="animateContent">
+    <!-- Header start -->
+    <div id="header"></div>
+    <script>
+      $("#header").load("/header.html")
+      setTimeout(() => {setActive("projectsLink")}, 500);
+    </script>
+    <!-- Header end -->
+    
+    <h1 id="typer" style="display: inline-block; margin: 1vH;">hi</h1>
+    <br/>
+    
+    <div style="background-color: lightgray; height: auto;">
+      <div class="productWrapper">
+        <div>
+          <h2>Bluebotlaboratories DownTuber</h2>
+          <p>Say goodbye to pesky adverts and malicious programs.</p>
+          <p>With the Bluebotlaboratories DownTuber, you can download any video* with ease!</p>
+          <a class="button" style="display: inline-block;" href="/productStore">Shop Now!</a>
+        </div>
+        <div style="width: 10vW;"></div>
+        <div>
+          <img src="/assets/media/productImages/DownTuber.png" alt="DownTuber" style="width: 100%;">
+          <p style="font-size: 8px;">*Tool can only download videos from YouTube.com</p>
+          <p style="font-size: 8px;">and only if they are publicaly accessible</p>
+        </div>
+      </div>
+    </div>
+    
+    <br/>
+    
+    <div style="background-color: lightgray; height: auto;">
+      <div class="productWrapper">
+        <div>
+          <h2>Bluebotlaboratories Merchandise</h2>
+          <p>Buy your very own Bluebotlaboratories Merchandise from our merchandise store!</p>
+          <p>Ranging from mugs, to shirts, to lunchboxes, we have products to suit your every need*</p>
+          <a class="button" style="display: inline-block;" href="/merchStore">Shop Now!</a>
+        </div>
+        <div style="width: 10vW;"></div>
+        <div>
+          <img src="/assets/media/productImages/Mug.jpg" alt="Mug" style="width: 100%;">
+          <p style="font-size: 8px;">*Not guaranteed, spoon not included</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Footer start -->
+    <div id="footer"></div>
+    <script>
+      $("#footer").load("/footer.html")
+      setTimeout(() => {setActive("projectsLink")}, 500);
+    </script>
+  <!-- Footer end -->
+</body>
+</html>

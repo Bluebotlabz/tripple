@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%;">
+
+<head>
+  <!-- Title -->
+  <title>Bluebotlaboratories - home</title>
+  <!-- Icon -->
+  <link rel="icon" href="/media/favicon.ico" type="image/x-icon">
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/ed2bdc0bb3.js" crossorigin="anonymous" SameSite=Lax></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="/scripts/Bluebotlaboratories-js-helper.js"></script>
+</head>
+
+<noscript>
+  <style>
+    body {
+      display: none;
+    }
+
+  </style>
+
+  <meta http-equiv="refresh" content="0.0; url=/javaError.html" />
+</noscript>
+
+<body onload="load()">
+  <!-- Loader start -->
+  <video id="loader" autoplay loop muted playsinline>
+    <source src="/media/loading.mp4" type="video/mp4" />
+    Loading...
+  </video>
+  
+  <script>
+    function load() {
+      setTimeout(showPage, 2000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+  </script>
+  <!-- Loader end -->
+
+  <div style="display:none;" id="main" class="animateContent">
+    <!-- Header start -->    
+    <div include-html="/header.html"></div>
+    <script>
+      function setActive() {
+        document.getElementById("homeLink").classList.add("active");
+      }
+      includeHTML(setActive);
+    </script>
+    <!-- Header end -->
+    
+    <form action="downTuber.py" method="post">
+      <p>Enter YouTube URL: <input type="text" name="URL"></p>
+      
+      <input type="checkbox" name="audioOnly" value="1">
+      <label for="audioOnly">Download audio only?</label>
+      
+      <br/>
+      <br/>
+      
+      <input type="submit", value="Download Video!">
+    </form>
+
+  </div>
+</body>
+
+</html>

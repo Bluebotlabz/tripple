@@ -1,0 +1,92 @@
+#mainPost {
+  position: relative;
+  border-style: solid;
+  border-radius: 10px;
+  margin: 1vW;
+  padding: 1vW 0;
+  max-width: 1000px;
+  border-color: darkgray;
+  font-size: 24px;
+  animation-name: mainPostOpenMobile;
+  animation-duration: 3s;
+  text-align: center;
+  top: 0vH;
+}
+
+@keyframes mainPostOpenMobile {
+  0% {
+    margin: 1vW auto;
+    width: 50%;
+    top: 100vH;
+  }
+  50% {
+    margin: 1vW auto;
+    width: 50%;
+    top: 0vH;
+  }
+  99% {
+    margin: 1vW auto;
+    width: 98%;
+    top: 0vH;
+  }
+  100% {
+    margin: 1vW;
+    max-width: 1000px;
+    top: 0vH;
+  }
+}
+
+#mainPost h1 {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+#mainPost #info {
+  margin-left: 10px;
+  margin-top: 0px;
+  color: #4fb2e8;
+}
+
+#mainPost p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+#mainPost #categoryLink {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* Divider */
+.divider {
+  border-bottom: 3px solid grey;
+  margin: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  #mainPost {
+    margin: 1vW auto;
+    max-width: none;
+    width: 90vW;
+    animation-name: mainPostOpenDesktop;
+    animation-duration: 3s;
+  }
+  @keyframes mainPostOpenDesktop {
+  0% {
+    margin: 1vW auto;
+    width: 30%;
+    top: 100vH;
+  }
+  50% {
+    margin: 1vW auto;
+    width: 30%;
+    top: 0vH;
+  }
+  100% {
+    margin: 1vW auto;
+    width: 90vW;
+    top: 0vH;
+  }
+}
+}

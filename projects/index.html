@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%;">
+<head>
+  <!-- Title -->
+  <title>Bluebotlaboratories - Projects</title>
+  <!-- Icon -->
+  <link rel="icon" href="/assets/media/favicon.ico" type="image/x-icon">
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bluebotlaboratories Home Page - Play games, Buy Cool Products or Download our Apps">
+  <meta name="keywords" content="Bluebotlaboratories, Bluebot, Blue bot, Robots, Apps, Games, Services, Downloader">
+  <!-- CSS -->
+  <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/blog.css" rel="stylesheet" type="text/css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/ed2bdc0bb3.js" crossorigin="anonymous" SameSite=Lax></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  
+  <script src="/assets/scripts/Bluebotlaboratories-js-helper.js"></script>
+  <script src="/assets/scripts/jquery.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZMC7DR3SZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZZMC7DR3SZ');
+  </script>
+  <!-- Ad Test -->
+  <script data-ad-client="ca-pub-2348098156226261" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<noscript>
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+
+  <meta http-equiv="refresh" content="0.0; url=/errors/javaError.html" />
+</noscript>
+
+<body onload="load()">
+  <!-- Loader start -->
+  <image id="loader" src="/assets/media/loading.gif" alt="Loading...">
+  
+  <script>
+    function load() {
+      setTimeout(showPage, 2000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+  </script>
+  <!-- Loader end -->
+
+  <div style="display: none;" id="main" class="animateContent">
+    <!-- Header start -->
+    <div id="header"></div>
+    <script>
+      $("#header").load("/header.html")
+      setTimeout(() => {setActive("projectsLink")}, 500);
+    </script>
+    <!-- Header end -->
+    
+    <div id="mainPost">
+      <h2>New Projects System!</h2>
+      <h6 id="info"><a id="categoryLink" href="search.py">1/04/2021</a> | <a id="categoryLink" href="search.py">General News</a><h6>
+      <div class="divider"></div>
+      <p>
+        There is currently a new system in development for the projects and news pages which will look a little bit like this. The new system is faster, better and easier to manage than previous implementations!
+        <br>
+        <br>
+        On top of that, we will soon be releasing a new concept IoT product. It will allow you to control all your IoT Devices with ease and will also have Google Assistant Implemented in it.
+        <br>
+        <br>
+        This website is also being revamped with new animations, elements, features, games and more!
+        <br>
+        We are currently developing an RPG which will be released on this website when completed.
+        On top of that, we will soon be releasing some limited edition merchandise! Get it before it runs out <a href="/merchStore">here</a>!
+      </p>
+    </div>
+    
+  </div>
+    
+  <!-- Footer start -->
+    <div id="footer"></div>
+    <script>
+      $("#footer").load("/footer.html")
+      setTimeout(() => {setActive("projectsLink")}, 500);
+    </script>
+  <!-- Footer end -->
+</body>
+</html>

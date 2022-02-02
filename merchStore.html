@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%;">
+
+<head>
+  <!-- Title -->
+  <title>Bluebotlaboratories - merch store</title>
+  <!-- Icon -->
+  <link rel="icon" href="/assets/media/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/media/images/bluebot.png">
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/ed2bdc0bb3.js" crossorigin="anonymous" SameSite=Lax></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZMC7DR3SZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZZMC7DR3SZ');
+  </script>
+</head>
+
+<body onload="load()">
+  <!-- Loader start -->
+  <image id="loader" src="/assets/media/loading.gif" alt="Loading...">
+
+  <script>
+    function load() {
+      setTimeout(showPage, 2000);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+
+  </script>
+  <!-- Loader end -->
+
+  <div style="display:none;" id="main" class="animateContent">
+    <!--
+    <h1>We're Sorry, we are currently experiencing technical difficulties beyond our control.</h1>
+    <h2>Please try again later.</h2>
+    <h3>Thank you for your patience.</h3>
+    -->
+
+    <div id="shop">
+    </div>
+
+    <script>
+      var spread_shop_config = {
+        shopName: 'bluebotlaboratories-merch-store',
+        locale: 'en_GB',
+        prefix: 'https://shop.spreadshirt.co.uk',
+        baseId: 'shop'
+      };
+
+    </script>
+
+    <script type="text/javascript" src="https://shop.spreadshirt.co.uk/shopfiles/shopclient/shopclient.nocache.js">
+    </script>
+
+  </div>
+</body>
+
+</html>

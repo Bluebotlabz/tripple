@@ -1,0 +1,142 @@
+/* Form some wierd reason, everything navBar related has to start with .navBar */
+
+/* Main Header */
+.header {
+  background-color: #4fb2e8;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.navBar {
+  width: 100%;
+  overflow: hidden;
+  background-color: #4fb2e8;
+}
+
+/* Navigation Bar Buttons */
+.navBar a, .dropdownButton {
+  display: block;
+  float: left;
+  font-size: 18px;
+  padding: 16px;
+  background-color: #4fb2e8;
+  color: black;
+  text-decoration: none;
+  height: 100%;
+}
+
+/* Fix Dropdown Margin */
+.navBar .dropdownButton {
+  float: none;
+}
+
+/* Change Colour when active or hovered over */
+.navBar a:hover, .dropdownButton:hover, .navBar .active, .dropdown:hover .dropdownButton, .active {
+  background-color: #297cb3;
+}
+
+/* Dropdown button */
+.navBar .dropdownButton {
+  border: none;
+  outline: none;
+  display: block;
+  font-size: 18px;
+  padding: 16px;
+  background-color: #4fb2e8;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* Dropdown and dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdownContent a {
+  float: none;
+  text-align: left;
+}
+
+/* Dropdown button when hovered over  */
+.dropdown:hover .dropdownContent {
+  display: block;
+  -webkit-animation-name: dropdown;
+  animation-name: dropdown;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+/* Dropdown menu animation */
+@-webkit-keyframes dropdown {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.navBar .openResponsiveNavBar {
+  display: none;
+}
+
+/* Responsive menu */
+@media screen and (max-width: 650px) {
+  /* Header */
+  .header {
+    font-size: 4vW;
+  }
+  
+  .navBar a:not(:nth-child(2), .openResponsiveNavBar), .dropdown {
+    display: none;
+  }
+  
+  .navBar .openResponsiveNavBar {
+    display: block;
+    float: right;
+  }
+  
+  .navBar.responsive a, .navBar.responsive .dropdown {
+    display: block;
+    float: none;
+    text-align: center;
+    position: static;
+  }
+  
+  .navBar.responsive>a:nth-child(2) {
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .navBar.responsive .openResponsiveNavBar {
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 0;
+  }
+  
+  .navBar.responsive .dropdownContent {
+    float: none;
+    position: static
+  }
+}

@@ -1,0 +1,73 @@
+# Disable indexing
+Options -Indexes
+
+# Browser cache
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/jpg "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType text/css "access plus 5 minutes"
+	ExpiresByType application/pdf "access plus 1 month"
+	ExpiresByType text/javascript "access plus 5 minutes"
+	ExpiresByType text/html "access plus 5 minutes"
+	ExpiresByType image/x-icon "access plus 1 month"
+	ExpiresDefault "access plus 5 minutes"
+</IfModule>
+<ifModule mod_headers.c>
+Header set X-Endurance-Cache-Level "2"
+</ifModule>
+
+# Redirect rules
+<IfModule mod_rewrite.c>
+
+#Enable redirect
+RewriteEngine On
+RewriteBase /
+
+#Redirect to secure site every time
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,NE]
+
+#Error Documents
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+
+RewriteRule ^news$ /news.html [L]
+RewriteRule ^products$ /products.html [L]
+RewriteRule ^merchStore$ /merchStore.html [L]
+RewriteRule ^projects$ /projects.html [L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+
+# Uncomment for maintenance mode
+#RewriteCond %{REMOTE_ADDR} !^2\.103\.5\.199
+#RewriteCond %{REQUEST_URI} !^/errors/maintenance\.html$
+
+# Uncommend for maintenance mode for specific pages
+#RewriteRule ^(.*).html$ !https://bluebotlaboratories.com/errors/maintenance.html [R=307,L]
+#RewriteRule /productStore !https://bluebotlaboratories.com/errors/maintenance.html [R=307,L]
+
+</IfModule>
+
+#Make .py act like cgi-script:
+AddHandler cgi-script .py
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

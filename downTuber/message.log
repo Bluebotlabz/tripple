@@ -1,0 +1,22 @@
+this will be written to message.log
+
+
+-----------------------------------
+             Copyright             |
+|     Bluebotlaboratories 2020     |
+|       Downtuber    v1.2.3        |
+-----------------------------------
+Content-type:text/html
+
+
+<html>
+  <head>
+    <title>Bluebotlaboratories - downtuber</title>
+  </head>
+  <body>
+    <p>Downloading video...</p>
+    <p id="progress"></p>
+Error: invalid URL
+<built-in function exc_info>
+  </body>
+</html>
