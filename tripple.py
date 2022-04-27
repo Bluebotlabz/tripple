@@ -9,7 +9,7 @@
 # TODO
 # [DONE]    Add addition
 # [DONE]    Add subtraction
-# [TODO]    Add multiplication
+# [DONE]    Add multiplication
 # [TODO]    Add division
 ###
 from copy import copy
