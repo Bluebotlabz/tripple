@@ -1,5 +1,6 @@
 # tripple
 It's literally a way to store numbers as strings, allowing for theoretically, infinitely long numbers
+It's called ~~tripple~~ I mean triple because it is like a double... but better
 
 The code spels it `triple`
 
