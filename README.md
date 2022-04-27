@@ -1,4 +1,5 @@
 # tripple
+It's literally a way to store numbers as strings, allowing for theoretically, infinitely long numbers
 
 The code spels it `triple`
 
@@ -21,4 +22,4 @@ do ~~not~~ use it
 <br>
 <br>
 
-Also, in theory it solves [Epochalypse](https://en.wikipedia.org/wiki/Year_2038_problem)
+Also, in theory it solves [The Epochalypse](https://en.wikipedia.org/wiki/Year_2038_problem)
